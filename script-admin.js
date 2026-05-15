@@ -1,9 +1,7 @@
 // ========== ADMIN LANDING PAGE ==========
-const SENHA_ADMIN = "curina2024"; // ALTERE ESTA SENHA!
+const SENHA_ADMIN = "curina2024";
 
-// Verifica se já está logado
 if (localStorage.getItem('lp_admin_logado') !== 'sim') {
-    // Mostra tela de senha
     document.querySelector('.admin-container').innerHTML = `
         <h2>🔐 Acesso Restrito</h2>
         <p style="text-align:center;color:#808098;font-size:13px;margin-bottom:16px;">Área exclusiva para administrador</p>
@@ -34,7 +32,6 @@ function logout() {
     location.reload();
 }
 
-// Só carrega se estiver logado
 if (localStorage.getItem('lp_admin_logado') === 'sim') {
     carregarConfig();
 }
@@ -49,11 +46,18 @@ async function carregarConfig() {
             document.getElementById('admin-preco').value = config.preco || '';
             document.getElementById('admin-whatsapp').value = config.whatsapp || '';
             document.getElementById('admin-mensagem').value = config.mensagemWhatsApp || '';
+            document.getElementById('admin-link-compra').value = config.linkCompra || '';
             document.getElementById('admin-video').value = config.videoYouTube || '';
-            const fotos = config.fotos || [];
-            document.getElementById('admin-foto1').value = fotos[0] || '';
-            document.getElementById('admin-foto2').value = fotos[1] || '';
-            document.getElementById('admin-foto3').value = fotos[2] || '';
+            const projetos = config.projetos || [{}, {}, {}];
+            document.getElementById('admin-proj1-nome').value = projetos[0]?.nome || '';
+            document.getElementById('admin-proj1-img').value = projetos[0]?.imagem || '';
+            document.getElementById('admin-proj1-link').value = projetos[0]?.link || '';
+            document.getElementById('admin-proj2-nome').value = projetos[1]?.nome || '';
+            document.getElementById('admin-proj2-img').value = projetos[1]?.imagem || '';
+            document.getElementById('admin-proj2-link').value = projetos[1]?.link || '';
+            document.getElementById('admin-proj3-nome').value = projetos[2]?.nome || '';
+            document.getElementById('admin-proj3-img').value = projetos[2]?.imagem || '';
+            document.getElementById('admin-proj3-link').value = projetos[2]?.link || '';
         }
     } catch (e) {
         console.log('Nenhuma configuração salva ainda.');
@@ -67,11 +71,24 @@ async function salvarConfig() {
         preco: document.getElementById('admin-preco').value.trim(),
         whatsapp: document.getElementById('admin-whatsapp').value.trim(),
         mensagemWhatsApp: document.getElementById('admin-mensagem').value.trim(),
+        linkCompra: document.getElementById('admin-link-compra').value.trim(),
         videoYouTube: document.getElementById('admin-video').value.trim(),
-        fotos: [
-            document.getElementById('admin-foto1').value.trim(),
-            document.getElementById('admin-foto2').value.trim(),
-            document.getElementById('admin-foto3').value.trim()
+        projetos: [
+            {
+                nome: document.getElementById('admin-proj1-nome').value.trim(),
+                imagem: document.getElementById('admin-proj1-img').value.trim(),
+                link: document.getElementById('admin-proj1-link').value.trim()
+            },
+            {
+                nome: document.getElementById('admin-proj2-nome').value.trim(),
+                imagem: document.getElementById('admin-proj2-img').value.trim(),
+                link: document.getElementById('admin-proj2-link').value.trim()
+            },
+            {
+                nome: document.getElementById('admin-proj3-nome').value.trim(),
+                imagem: document.getElementById('admin-proj3-img').value.trim(),
+                link: document.getElementById('admin-proj3-link').value.trim()
+            }
         ]
     };
 
