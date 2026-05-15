@@ -60,58 +60,42 @@
         </div>
         <h2>⚙️ Editar Landing Page</h2>
         
-        <div class="input-group">
-            <label>Título Principal</label>
-            <input type="text" id="admin-titulo" placeholder="Título do hero">
-        </div>
-        <div class="input-group">
-            <label>Subtítulo / Descrição</label>
-            <textarea id="admin-subtitulo" placeholder="Descrição abaixo do título"></textarea>
-        </div>
-        <div class="input-group">
-            <label>Preço</label>
-            <input type="text" id="admin-preco" placeholder="Ex: R$ 97">
-        </div>
-        <div class="input-group">
-            <label>Número WhatsApp (com DDD)</label>
-            <input type="text" id="admin-whatsapp" placeholder="5599999999999">
-        </div>
-        <div class="input-group">
-            <label>Mensagem do WhatsApp</label>
-            <input type="text" id="admin-mensagem" placeholder="Olá! Tenho interesse...">
-        </div>
-        <div class="input-group">
-            <label>Link do Vídeo YouTube (embed)</label>
-            <input type="text" id="admin-video" placeholder="https://www.youtube.com/embed/...">
-        </div>
-        <div class="input-group">
-            <label>Link Foto 1 (URL)</label>
-            <input type="text" id="admin-foto1" placeholder="https://...">
-        </div>
-        <div class="input-group">
-            <label>Link Foto 2 (URL)</label>
-            <input type="text" id="admin-foto2" placeholder="https://...">
-        </div>
-        <div class="input-group">
-            <label>Link Foto 3 (URL)</label>
-            <input type="text" id="admin-foto3" placeholder="https://...">
-        </div>
+        <div class="input-group"><label>Título Principal</label><input type="text" id="admin-titulo" placeholder="Título do hero"></div>
+        <div class="input-group"><label>Subtítulo / Descrição</label><textarea id="admin-subtitulo" placeholder="Descrição abaixo do título"></textarea></div>
+        <div class="input-group"><label>Preço</label><input type="text" id="admin-preco" placeholder="Ex: R$ 97"></div>
+        <div class="input-group"><label>Número WhatsApp (com DDD)</label><input type="text" id="admin-whatsapp" placeholder="5599999999999"></div>
+        <div class="input-group"><label>Mensagem do WhatsApp</label><input type="text" id="admin-mensagem" placeholder="Olá! Tenho interesse..."></div>
+        <div class="input-group"><label>🔗 Link de Compra (Kiwify, Hotmart, etc.)</label><input type="text" id="admin-link-compra" placeholder="https://kiwify.com/..."></div>
+        <div class="input-group"><label>Link do Vídeo YouTube (embed)</label><input type="text" id="admin-video" placeholder="https://www.youtube.com/embed/..."></div>
+        
+        <hr style="border-color:rgba(255,255,255,0.06); margin:20px 0;">
+        <h3 style="color:#c0c0d0; margin-bottom:14px;">📁 Projetos</h3>
+        
+        <div class="input-group"><label>🖼️ Projeto 1 - Nome</label><input type="text" id="admin-proj1-nome" placeholder="Nome do projeto"></div>
+        <div class="input-group"><label>🖼️ Projeto 1 - Link da Imagem</label><input type="text" id="admin-proj1-img" placeholder="https://..."></div>
+        <div class="input-group"><label>🔗 Projeto 1 - Link do Site</label><input type="text" id="admin-proj1-link" placeholder="https://..."></div>
+        
+        <hr style="border-color:rgba(255,255,255,0.04); margin:12px 0;">
+        <div class="input-group"><label>🖼️ Projeto 2 - Nome</label><input type="text" id="admin-proj2-nome" placeholder="Nome do projeto"></div>
+        <div class="input-group"><label>🖼️ Projeto 2 - Link da Imagem</label><input type="text" id="admin-proj2-img" placeholder="https://..."></div>
+        <div class="input-group"><label>🔗 Projeto 2 - Link do Site</label><input type="text" id="admin-proj2-link" placeholder="https://..."></div>
+        
+        <hr style="border-color:rgba(255,255,255,0.04); margin:12px 0;">
+        <div class="input-group"><label>🖼️ Projeto 3 - Nome</label><input type="text" id="admin-proj3-nome" placeholder="Nome do projeto"></div>
+        <div class="input-group"><label>🖼️ Projeto 3 - Link da Imagem</label><input type="text" id="admin-proj3-img" placeholder="https://..."></div>
+        <div class="input-group"><label>🔗 Projeto 3 - Link do Site</label><input type="text" id="admin-proj3-link" placeholder="https://..."></div>
         
         <button class="btn-salvar" onclick="salvarConfig()">💾 Salvar Alterações</button>
         <p class="sucesso" id="msg-sucesso">✅ Salvo com sucesso!</p>
         
-        <div class="voltar">
-            <a href="index.html">← Voltar para a página</a>
-        </div>
+        <div class="voltar"><a href="index.html">← Voltar para a página</a></div>
     </div>
 
-    <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
     <script src="firebase-config.js"></script>
     <script src="script-admin.js"></script>
     <script>
-        // Mostra botão sair se estiver logado
         if (localStorage.getItem('lp_admin_logado') === 'sim') {
             document.getElementById('btn-sair').style.display = 'inline';
         }
