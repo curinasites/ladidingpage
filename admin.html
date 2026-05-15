@@ -7,41 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body { background: #0a0a14; }
-        .admin-container {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 30px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px;
-        }
+        .admin-container { max-width: 600px; margin: 40px auto; padding: 30px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; }
         .admin-container h2 { text-align: center; margin-bottom: 24px; color: #e0e0f0; }
         .input-group { margin-bottom: 16px; }
         .input-group label { display: block; font-size: 13px; color: #b0b0c0; margin-bottom: 5px; font-weight: 600; }
-        .input-group input, .input-group textarea {
-            width: 100%;
-            padding: 11px 14px;
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.12);
-            background: rgba(255,255,255,0.05);
-            color: #fff;
-            font-size: 14px;
-            outline: none;
-            font-family: inherit;
-        }
+        .input-group input, .input-group textarea { width: 100%; padding: 11px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); color: #fff; font-size: 14px; outline: none; font-family: inherit; }
         .input-group textarea { min-height: 80px; resize: vertical; }
-        .btn-salvar {
-            width: 100%;
-            padding: 14px;
-            border-radius: 30px;
-            border: none;
-            font-weight: 700;
-            font-size: 15px;
-            cursor: pointer;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: #fff;
-            margin-top: 10px;
-        }
+        .btn-salvar { width: 100%; padding: 14px; border-radius: 30px; border: none; font-weight: 700; font-size: 15px; cursor: pointer; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; margin-top: 10px; }
         .btn-salvar:hover { opacity: 0.9; }
         .sucesso { color: #4ade80; text-align: center; margin-top: 10px; display: none; }
         .voltar { text-align: center; margin-top: 20px; }
@@ -63,27 +35,14 @@
         <div class="input-group"><label>Título Principal</label><input type="text" id="admin-titulo" placeholder="Título do hero"></div>
         <div class="input-group"><label>Subtítulo / Descrição</label><textarea id="admin-subtitulo" placeholder="Descrição abaixo do título"></textarea></div>
         <div class="input-group"><label>Preço</label><input type="text" id="admin-preco" placeholder="Ex: R$ 97"></div>
-        <div class="input-group"><label>Número WhatsApp (com DDD)</label><input type="text" id="admin-whatsapp" placeholder="5599999999999"></div>
-        <div class="input-group"><label>Mensagem do WhatsApp</label><input type="text" id="admin-mensagem" placeholder="Olá! Tenho interesse..."></div>
         <div class="input-group"><label>🔗 Link de Compra (Kiwify, Hotmart, etc.)</label><input type="text" id="admin-link-compra" placeholder="https://kiwify.com/..."></div>
         <div class="input-group"><label>Link do Vídeo YouTube (embed)</label><input type="text" id="admin-video" placeholder="https://www.youtube.com/embed/..."></div>
         
         <hr style="border-color:rgba(255,255,255,0.06); margin:20px 0;">
-        <h3 style="color:#c0c0d0; margin-bottom:14px;">📁 Projetos</h3>
+        <h3 style="color:#c0c0d0; margin-bottom:14px;">📁 Site de Exemplo</h3>
         
-        <div class="input-group"><label>🖼️ Projeto 1 - Nome</label><input type="text" id="admin-proj1-nome" placeholder="Nome do projeto"></div>
-        <div class="input-group"><label>🖼️ Projeto 1 - Link da Imagem</label><input type="text" id="admin-proj1-img" placeholder="https://..."></div>
-        <div class="input-group"><label>🔗 Projeto 1 - Link do Site</label><input type="text" id="admin-proj1-link" placeholder="https://..."></div>
-        
-        <hr style="border-color:rgba(255,255,255,0.04); margin:12px 0;">
-        <div class="input-group"><label>🖼️ Projeto 2 - Nome</label><input type="text" id="admin-proj2-nome" placeholder="Nome do projeto"></div>
-        <div class="input-group"><label>🖼️ Projeto 2 - Link da Imagem</label><input type="text" id="admin-proj2-img" placeholder="https://..."></div>
-        <div class="input-group"><label>🔗 Projeto 2 - Link do Site</label><input type="text" id="admin-proj2-link" placeholder="https://..."></div>
-        
-        <hr style="border-color:rgba(255,255,255,0.04); margin:12px 0;">
-        <div class="input-group"><label>🖼️ Projeto 3 - Nome</label><input type="text" id="admin-proj3-nome" placeholder="Nome do projeto"></div>
-        <div class="input-group"><label>🖼️ Projeto 3 - Link da Imagem</label><input type="text" id="admin-proj3-img" placeholder="https://..."></div>
-        <div class="input-group"><label>🔗 Projeto 3 - Link do Site</label><input type="text" id="admin-proj3-link" placeholder="https://..."></div>
+        <div class="input-group"><label>🖼️ Link da Imagem de Preview</label><input type="text" id="admin-exemplo-img" placeholder="https://..."></div>
+        <div class="input-group"><label>🔗 Link do Site de Exemplo</label><input type="text" id="admin-exemplo-link" placeholder="https://..."></div>
         
         <button class="btn-salvar" onclick="salvarConfig()">💾 Salvar Alterações</button>
         <p class="sucesso" id="msg-sucesso">✅ Salvo com sucesso!</p>
