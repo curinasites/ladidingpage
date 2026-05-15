@@ -7,10 +7,11 @@
     <meta name="description" content="Desenvolvimento de sites, aplicativos e lojas de APK. Serviço profissional de programação.">
     <meta property="og:title" content="DevPro - Criação de Sites e Apps Profissionais">
     <meta property="og:description" content="Desenvolvimento de sites, aplicativos e lojas de APK. Serviço profissional de programação.">
+    <meta property="og:image" content="favicon.png">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,57 +21,79 @@
     <header class="header-lp" id="header">
         <nav class="nav-lp">
             <a href="#" class="nav-logo">
-                <img src="favicon.png" alt="DevPro" class="logo-img-nav" style="width:28px; height:28px; border-radius:6px; object-fit:cover;">
-                <span>DevPro</span>
+                <img src="favicon.png" alt="DevPro" class="logo-img-nav">
+                <span>Dev<span class="logo-accent">Pro</span></span>
             </a>
             <div class="nav-links">
-                <a href="#servicos">Serviços</a>
-                <a href="#exemplo">Portfólio</a>
-                <a href="#preco">Preço</a>
-                <a href="#depoimentos">Clientes</a>
+                <a href="#servicos" class="nav-link-item">Serviços</a>
+                <a href="#exemplo" class="nav-link-item">Portfólio</a>
+                <a href="#preco" class="nav-link-item">Preço</a>
+                <a href="#depoimentos" class="nav-link-item">Clientes</a>
+                <a href="#faq" class="nav-link-item">FAQ</a>
             </div>
-            <a href="#" class="btn-header-lp" id="lp-btn-header">Adquirir Agora</a>
+            <a href="#" class="btn-header-lp" id="lp-btn-header">
+                Adquirir Agora
+                <span class="btn-shine"></span>
+            </a>
         </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero-lp" id="hero">
+        <div class="hero-bg-glow"></div>
         <div class="hero-grid">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span class="badge-dot"></span> Serviço Profissional
+                    <span class="badge-dot"></span> Serviço Profissional • Entrega em 7 dias
                 </div>
-                <h1 class="hero-title" id="lp-titulo">Transforme sua Ideia em um Site ou App <span class="gradient-text">Profissional</span></h1>
-                <p class="hero-subtitle" id="lp-subtitulo">Desenvolvimento rápido, design moderno e preço acessível. Tudo que você precisa para começar seu negócio digital em até 7 dias.</p>
+                <h1 class="hero-title" id="lp-titulo">
+                    Transforme sua Ideia em um
+                    <span class="gradient-text">Site ou App Profissional</span>
+                </h1>
+                <p class="hero-subtitle" id="lp-subtitulo">
+                    Desenvolvimento rápido, design moderno e preço acessível. 
+                    Tudo que você precisa para começar seu negócio digital.
+                </p>
                 <div class="hero-buttons">
                     <a href="#" class="btn-primary-lp btn-glow" id="lp-btn-whatsapp">
                         🛒 Adquirir Agora
                         <span class="btn-arrow">→</span>
+                        <span class="btn-shine"></span>
                     </a>
-                    <a href="#exemplo" class="btn-outline-lp">Ver Exemplos</a>
+                    <a href="#exemplo" class="btn-outline-lp">
+                        Ver Exemplos
+                        <span class="btn-arrow">↓</span>
+                    </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">50+</span>
-                        <span class="stat-label">Projetos</span>
+                        <span class="stat-label">Projetos Entregues</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <span class="stat-number">98%</span>
-                        <span class="stat-label">Clientes Satisfeitos</span>
+                        <span class="stat-label">Satisfação</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <span class="stat-number">7 dias</span>
-                        <span class="stat-label">Entrega Média</span>
+                        <span class="stat-label">Prazo Médio</span>
                     </div>
                 </div>
             </div>
             <div class="hero-video">
                 <div class="video-wrapper-lp">
-                    <iframe id="lp-video-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo de apresentação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-border-glow"></div>
+                    <iframe id="lp-video-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo de apresentação" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-glow"></div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Role para baixo</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
             </div>
         </div>
     </section>
@@ -78,42 +101,42 @@
     <!-- SERVIÇOS -->
     <section class="servicos-lp" id="servicos">
         <div class="section-header">
-            <span class="section-tag">Nossos Serviços</span>
-            <h2 class="section-title-lp">Soluções Completas para seu Negócio Digital</h2>
-            <p class="section-subtitle-lp">Tudo que você precisa em um só lugar</p>
+            <span class="section-tag">✨ Nossos Serviços</span>
+            <h2 class="section-title-lp">Soluções Completas para seu <span class="gradient-text">Negócio Digital</span></h2>
+            <p class="section-subtitle-lp">Tudo que você precisa em um só lugar, com qualidade premium</p>
         </div>
         <div class="servicos-grid">
-            <div class="servico-card-lp">
+            <div class="servico-card-lp" data-aos="fade-up">
                 <div class="servico-icon-wrapper">
                     <span class="servico-icon">🌐</span>
                 </div>
                 <h3>Sites Profissionais</h3>
-                <p>Landing pages, sites institucionais, lojas online e muito mais. Tudo responsivo e otimizado.</p>
-                <a href="#" class="servico-link">Saiba mais →</a>
+                <p>Landing pages, sites institucionais, lojas online e muito mais. Tudo responsivo e otimizado para SEO.</p>
+                <a href="#" class="servico-link">Saber mais <span>→</span></a>
             </div>
-            <div class="servico-card-lp">
+            <div class="servico-card-lp" data-aos="fade-up" data-aos-delay="100">
                 <div class="servico-icon-wrapper">
                     <span class="servico-icon">📱</span>
                 </div>
                 <h3>Aplicativos Android</h3>
-                <p>Lojas de APK, catálogos, apps personalizados. Design moderno e funcionalidade completa.</p>
-                <a href="#" class="servico-link">Saiba mais →</a>
+                <p>Lojas de APK, catálogos e apps personalizados. Design moderno e funcionalidade completa.</p>
+                <a href="#" class="servico-link">Saber mais <span>→</span></a>
             </div>
-            <div class="servico-card-lp">
+            <div class="servico-card-lp" data-aos="fade-up" data-aos-delay="200">
                 <div class="servico-icon-wrapper">
                     <span class="servico-icon">🎨</span>
                 </div>
                 <h3>Design Premium</h3>
-                <p>Interfaces modernas com animações suaves, gradientes e experiência de usuário incrível.</p>
-                <a href="#" class="servico-link">Saiba mais →</a>
+                <p>Interfaces modernas com animações suaves, gradientes e experiência de usuário excepcional.</p>
+                <a href="#" class="servico-link">Saber mais <span>→</span></a>
             </div>
-            <div class="servico-card-lp">
+            <div class="servico-card-lp" data-aos="fade-up" data-aos-delay="300">
                 <div class="servico-icon-wrapper">
                     <span class="servico-icon">⚡</span>
                 </div>
-                <h3>Entrega Rápida</h3>
-                <p>Seu projeto pronto em até 7 dias, com suporte de 30 dias incluso para ajustes.</p>
-                <a href="#" class="servico-link">Saiba mais →</a>
+                <h3>Entrega Express</h3>
+                <p>Seu projeto pronto em até 7 dias, com suporte de 30 dias incluso para ajustes e dúvidas.</p>
+                <a href="#" class="servico-link">Saber mais <span>→</span></a>
             </div>
         </div>
     </section>
@@ -121,23 +144,23 @@
     <!-- EXEMPLO -->
     <section class="exemplo-lp" id="exemplo">
         <div class="section-header">
-            <span class="section-tag">Portfólio</span>
-            <h2 class="section-title-lp">Veja um Projeto Recente</h2>
+            <span class="section-tag">🚀 Portfólio</span>
+            <h2 class="section-title-lp">Projetos <span class="gradient-text">Recentes</span></h2>
             <p class="section-subtitle-lp">Conheça a qualidade do nosso trabalho</p>
         </div>
         <div class="exemplo-container">
             <div class="exemplo-card">
                 <div class="exemplo-image-wrapper">
-                    <img src="https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Preview+do+Site" alt="Preview" id="lp-exemplo-img">
+                    <img src="https://via.placeholder.com/800x500/8b5cf6/ffffff?text=Preview+do+Projeto" alt="Preview" id="lp-exemplo-img">
                     <div class="exemplo-overlay">
-                        <span>Projeto em Destaque</span>
+                        <span>✨ Projeto em Destaque</span>
                     </div>
                 </div>
                 <div class="exemplo-info">
                     <h3>Site / App Profissional</h3>
-                    <p>Design moderno, responsivo e pronto para converter visitantes em clientes.</p>
+                    <p>Design moderno, responsivo e otimizado para converter visitantes em clientes. Tecnologia de ponta.</p>
                     <a href="#" class="btn-primary-lp" id="lp-btn-exemplo" target="_blank">
-                        👁️ Ver Site de Exemplo
+                        👁️ Ver Projeto Completo
                         <span class="btn-arrow">→</span>
                     </a>
                 </div>
@@ -148,13 +171,13 @@
     <!-- PREÇO -->
     <section class="preco-lp" id="preco">
         <div class="section-header">
-            <span class="section-tag">Preço</span>
-            <h2 class="section-title-lp">Invista no seu Negócio Digital</h2>
-            <p class="section-subtitle-lp">Preço único, sem mensalidades</p>
+            <span class="section-tag">💰 Investimento</span>
+            <h2 class="section-title-lp">Preço <span class="gradient-text">Único</span></h2>
+            <p class="section-subtitle-lp">Sem mensalidades, sem surpresas</p>
         </div>
         <div class="preco-container">
             <div class="preco-card-lp">
-                <div class="preco-ribbon">MAIS POPULAR</div>
+                <div class="preco-ribbon">🔥 MAIS POPULAR</div>
                 <div class="preco-header-card">
                     <span class="preco-plan-name">Plano Único</span>
                     <div class="preco-price">
@@ -164,16 +187,17 @@
                     <span class="preco-period">pagamento único</span>
                 </div>
                 <ul class="preco-features">
-                    <li><i class="fas fa-check-circle"></i> Site ou App completo</li>
+                    <li><i class="fas fa-check-circle"></i> Site ou App completo e funcional</li>
                     <li><i class="fas fa-check-circle"></i> Design personalizado premium</li>
-                    <li><i class="fas fa-check-circle"></i> Entrega em até 7 dias</li>
-                    <li><i class="fas fa-check-circle"></i> Suporte por 30 dias</li>
-                    <li><i class="fas fa-check-circle"></i> Hospedagem gratuita</li>
-                    <li><i class="fas fa-check-circle"></i> SEO otimizado</li>
+                    <li><i class="fas fa-check-circle"></i> Entrega em até 7 dias úteis</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte VIP por 30 dias</li>
+                    <li><i class="fas fa-check-circle"></i> Hospedagem gratuita inclusa</li>
+                    <li><i class="fas fa-check-circle"></i> SEO otimizado para Google</li>
                 </ul>
                 <a href="#" class="btn-primary-lp btn-block-lp btn-glow" id="lp-btn-comprar">
                     🛒 Adquirir Agora
                     <span class="btn-arrow">→</span>
+                    <span class="btn-shine"></span>
                 </a>
                 <p class="preco-garantia">✅ Satisfação garantida ou seu dinheiro de volta</p>
             </div>
@@ -183,34 +207,43 @@
     <!-- DEPOIMENTOS -->
     <section class="depoimentos-lp" id="depoimentos">
         <div class="section-header">
-            <span class="section-tag">Depoimentos</span>
-            <h2 class="section-title-lp">O Que Nossos Clientes Dizem</h2>
+            <span class="section-tag">⭐ Depoimentos</span>
+            <h2 class="section-title-lp">O Que Nossos <span class="gradient-text">Clientes</span> Dizem</h2>
             <p class="section-subtitle-lp">Histórias reais de quem já transformou seu negócio</p>
         </div>
         <div class="depoimentos-grid">
             <div class="depoimento-card-lp">
-                <div class="depoimento-header">
+                <div class="depoimento-quote">"</div>
+                <p>"Fiquei impressionado com a qualidade! Meu site ficou exatamente como eu queria. Recomendo demais o trabalho!"</p>
+                <div class="depoimento-footer-lp">
                     <div class="depoimento-avatar-lp" style="background: linear-gradient(135deg, #6366f1, #a78bfa);">J</div>
-                    <div><strong>João Silva</strong><span>Dono de Loja Virtual</span></div>
+                    <div>
+                        <strong>João Silva</strong>
+                        <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
-                <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
-                <p>"Fiquei impressionado com a qualidade! Meu site ficou exatamente como eu queria. Recomendo demais!"</p>
             </div>
             <div class="depoimento-card-lp">
-                <div class="depoimento-header">
+                <div class="depoimento-quote">"</div>
+                <p>"Contratei para fazer minha loja de APK e o resultado foi incrível. Muito profissional e entregou antes do prazo!"</p>
+                <div class="depoimento-footer-lp">
                     <div class="depoimento-avatar-lp" style="background: linear-gradient(135deg, #8b5cf6, #c4b5fd);">M</div>
-                    <div><strong>Maria Santos</strong><span>Criadora de Conteúdo</span></div>
+                    <div>
+                        <strong>Maria Santos</strong>
+                        <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
-                <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
-                <p>"Contratei para fazer minha loja de APK e o resultado foi incrível. Muito profissional e rápido!"</p>
             </div>
             <div class="depoimento-card-lp">
-                <div class="depoimento-header">
+                <div class="depoimento-quote">"</div>
+                <p>"Entrega super rápida e suporte nota 10. Já estou planejando o próximo projeto com eles!"</p>
+                <div class="depoimento-footer-lp">
                     <div class="depoimento-avatar-lp" style="background: linear-gradient(135deg, #a78bfa, #6366f1);">P</div>
-                    <div><strong>Pedro Costa</strong><span>Empreendedor Digital</span></div>
+                    <div>
+                        <strong>Pedro Costa</strong>
+                        <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
-                <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
-                <p>"Entrega super rápida e suporte nota 10. Já estou pensando no próximo projeto!"</p>
             </div>
         </div>
     </section>
@@ -218,43 +251,52 @@
     <!-- FAQ -->
     <section class="faq-lp" id="faq">
         <div class="section-header">
-            <span class="section-tag">FAQ</span>
-            <h2 class="section-title-lp">Dúvidas Frequentes</h2>
+            <span class="section-tag">❓ FAQ</span>
+            <h2 class="section-title-lp">Dúvidas <span class="gradient-text">Frequentes</span></h2>
         </div>
         <div class="faq-grid">
             <div class="faq-item-lp">
-                <h3><span class="faq-icon">💬</span> Quanto tempo leva?</h3>
-                <p>Em média 3 a 7 dias, dependendo da complexidade do projeto.</p>
+                <div class="faq-icon-wrap">💬</div>
+                <div class="faq-content">
+                    <h3>Quanto tempo leva para ficar pronto?</h3>
+                    <p>Em média 3 a 7 dias úteis, dependendo da complexidade. Sempre entregamos no prazo combinado.</p>
+                </div>
             </div>
             <div class="faq-item-lp">
-                <h3><span class="faq-icon">💰</span> Preciso pagar algo mais?</h3>
-                <p>Não! O valor é único. Domínio personalizado é opcional.</p>
+                <div class="faq-icon-wrap">💰</div>
+                <div class="faq-content">
+                    <h3>Preciso pagar algo a mais depois?</h3>
+                    <p>Não! O valor é único. Apenas se quiser um domínio personalizado (.com.br), paga-se à parte.</p>
+                </div>
             </div>
             <div class="faq-item-lp">
-                <h3><span class="faq-icon">🎯</span> Como funciona o suporte?</h3>
-                <p>30 dias de suporte gratuito via WhatsApp.</p>
+                <div class="faq-icon-wrap">🎯</div>
+                <div class="faq-content">
+                    <h3>Como funciona o suporte?</h3>
+                    <p>Você tem 30 dias de suporte VIP via WhatsApp para tirar dúvidas e solicitar ajustes no projeto.</p>
+                </div>
             </div>
             <div class="faq-item-lp">
-                <h3><span class="faq-icon">🔄</span> Posso pedir alterações?</h3>
-                <p>Sim! Pequenas alterações inclusas nos 30 dias de suporte.</p>
+                <div class="faq-icon-wrap">🔄</div>
+                <div class="faq-content">
+                    <h3>Posso pedir alterações depois?</h3>
+                    <p>Sim! Pequenas alterações estão inclusas nos 30 dias de suporte. Mudanças maiores são orçadas à parte.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA FINAL -->
     <section class="cta-lp">
+        <div class="cta-bg-glow"></div>
         <div class="cta-content">
-            <h2>Pronto para Ter Seu Site ou App?</h2>
-            <p>Clique no botão abaixo e garanta o seu por apenas <strong id="lp-preco-cta">R$ 97</strong></p>
+            <h2>Pronto para <span class="gradient-text">Transformar</span> seu Negócio?</h2>
+            <p>Garanta seu site ou app profissional por apenas <strong id="lp-preco-cta">R$ 97</strong></p>
             <a href="#" class="btn-primary-lp btn-glow btn-large-lp" id="lp-btn-cta">
                 🛒 Adquirir Agora
                 <span class="btn-arrow">→</span>
+                <span class="btn-shine"></span>
             </a>
-        </div>
-        <div class="cta-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
         </div>
     </section>
 
@@ -262,7 +304,7 @@
     <footer class="footer-lp">
         <div class="footer-content-lp">
             <div class="footer-brand">
-                <span class="footer-logo">◆ DevPro</span>
+                <span class="footer-logo">Dev<span class="logo-accent">Pro</span></span>
                 <p>Criação de sites e apps profissionais</p>
             </div>
             <div class="footer-links-lp">
@@ -270,6 +312,7 @@
                 <a href="#exemplo">Portfólio</a>
                 <a href="#preco">Preço</a>
                 <a href="#depoimentos">Clientes</a>
+                <a href="#faq">FAQ</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -281,8 +324,9 @@
     <a href="admin.html" class="admin-float" title="Painel Admin">⚙️</a>
 
     <!-- WHATSAPP FLUTUANTE -->
-    <a href="#" class="whatsapp-float" id="lp-whatsapp-float" target="_blank" title="Falar no WhatsApp">
+    <a href="#" class="whatsapp-float" id="lp-whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-pulse"></span>
     </a>
 
     <!-- Firebase -->
@@ -291,4 +335,4 @@
     <script src="firebase-config.js"></script>
     <script src="script.js"></script>
 </body>
-                                                                 </html>
+</html>
