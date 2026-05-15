@@ -1,4 +1,4 @@
-const SENHA_ADMIN = "curina2024";
+const SENHA_ADMIN = "Hadassa234*";
 
 if (localStorage.getItem('lp_admin_logado') !== 'sim') {
     document.querySelector('.admin-container').innerHTML = `
@@ -44,12 +44,21 @@ async function carregarConfig() {
 }
 
 async function salvarConfig() {
+    const videoInput = document.getElementById('admin-video').value.trim();
+    
+    // Extrai o ID do YouTube de qualquer formato de link
+    let videoId = videoInput;
+    if (videoInput.includes('youtube.com') || videoInput.includes('youtu.be')) {
+        const match = videoInput.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+        if (match) videoId = match[1];
+    }
+    
     const config = {
         titulo: document.getElementById('admin-titulo').value.trim(),
         subtitulo: document.getElementById('admin-subtitulo').value.trim(),
         preco: document.getElementById('admin-preco').value.trim(),
         linkCompra: document.getElementById('admin-link-compra').value.trim(),
-        videoYouTube: document.getElementById('admin-video').value.trim(),
+        videoYouTube: videoId,
         exemploImagem: document.getElementById('admin-exemplo-img').value.trim(),
         linkExemplo: document.getElementById('admin-exemplo-link').value.trim()
     };
