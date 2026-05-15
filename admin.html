@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background: #0a0a14; }
+        .admin-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+        }
+        .admin-container h2 { text-align: center; margin-bottom: 24px; color: #e0e0f0; }
+        .input-group { margin-bottom: 16px; }
+        .input-group label { display: block; font-size: 13px; color: #b0b0c0; margin-bottom: 5px; font-weight: 600; }
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 11px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            font-family: inherit;
+        }
+        .input-group textarea { min-height: 80px; resize: vertical; }
+        .btn-salvar {
+            width: 100%;
+            padding: 14px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: #fff;
+            margin-top: 10px;
+        }
+        .btn-salvar:hover { opacity: 0.9; }
+        .sucesso { color: #4ade80; text-align: center; margin-top: 10px; display: none; }
+        .voltar { text-align: center; margin-top: 20px; }
+        .voltar a { color: #808098; text-decoration: none; font-size: 13px; }
+        .voltar a:hover { color: #a78bfa; }
+    </style>
+</head>
+<body>
+
+    <div class="admin-container">
+        <h2>⚙️ Editar Landing Page</h2>
+        
+        <div class="input-group">
+            <label>Título Principal</label>
+            <input type="text" id="admin-titulo" placeholder="Título do hero">
+        </div>
+        <div class="input-group">
+            <label>Subtítulo / Descrição</label>
+            <textarea id="admin-subtitulo" placeholder="Descrição abaixo do título"></textarea>
+        </div>
+        <div class="input-group">
+            <label>Preço</label>
+            <input type="text" id="admin-preco" placeholder="Ex: R$ 97">
+        </div>
+        <div class="input-group">
+            <label>Número WhatsApp (com DDD)</label>
+            <input type="text" id="admin-whatsapp" placeholder="5599999999999">
+        </div>
+        <div class="input-group">
+            <label>Mensagem do WhatsApp</label>
+            <input type="text" id="admin-mensagem" placeholder="Olá! Tenho interesse...">
+        </div>
+        <div class="input-group">
+            <label>Link do Vídeo YouTube (embed)</label>
+            <input type="text" id="admin-video" placeholder="https://www.youtube.com/embed/...">
+        </div>
+        <div class="input-group">
+            <label>Link Foto 1 (URL)</label>
+            <input type="text" id="admin-foto1" placeholder="https://...">
+        </div>
+        <div class="input-group">
+            <label>Link Foto 2 (URL)</label>
+            <input type="text" id="admin-foto2" placeholder="https://...">
+        </div>
+        <div class="input-group">
+            <label>Link Foto 3 (URL)</label>
+            <input type="text" id="admin-foto3" placeholder="https://...">
+        </div>
+        
+        <button class="btn-salvar" onclick="salvarConfig()">💾 Salvar Alterações</button>
+        <p class="sucesso" id="msg-sucesso">✅ Salvo com sucesso!</p>
+        
+        <div class="voltar">
+            <a href="index.html">← Voltar para a página</a>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script-admin.js"></script>
+</body>
+</html>
