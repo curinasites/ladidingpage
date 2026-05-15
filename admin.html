@@ -47,11 +47,17 @@
         .voltar { text-align: center; margin-top: 20px; }
         .voltar a { color: #808098; text-decoration: none; font-size: 13px; }
         .voltar a:hover { color: #a78bfa; }
+        .btn-sair { color: #f87171; font-size: 12px; text-decoration: none; }
+        .btn-sair:hover { color: #ef4444; }
     </style>
 </head>
 <body>
 
     <div class="admin-container">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+            <span></span>
+            <a href="#" onclick="logout()" class="btn-sair" id="btn-sair" style="display:none;">🚪 Sair</a>
+        </div>
         <h2>⚙️ Editar Landing Page</h2>
         
         <div class="input-group">
@@ -104,5 +110,11 @@
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
     <script src="firebase-config.js"></script>
     <script src="script-admin.js"></script>
+    <script>
+        // Mostra botão sair se estiver logado
+        if (localStorage.getItem('lp_admin_logado') === 'sim') {
+            document.getElementById('btn-sair').style.display = 'inline';
+        }
+    </script>
 </body>
 </html>
