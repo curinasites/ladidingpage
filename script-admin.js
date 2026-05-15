@@ -1,4 +1,3 @@
-// ========== ADMIN LANDING PAGE ==========
 const SENHA_ADMIN = "curina2024";
 
 if (localStorage.getItem('lp_admin_logado') !== 'sim') {
@@ -11,15 +10,12 @@ if (localStorage.getItem('lp_admin_logado') !== 'sim') {
         </div>
         <p style="color:#f87171;font-size:13px;text-align:center;display:none;" id="erro-senha">Senha incorreta!</p>
         <button class="btn-salvar" onclick="verificarSenha()" style="width:100%; padding:14px; border-radius:30px; border:none; font-weight:700; font-size:15px; cursor:pointer; background:linear-gradient(135deg, #6366f1, #8b5cf6); color:#fff; margin-top:10px;">Entrar</button>
-        <div class="voltar" style="text-align:center; margin-top:20px;">
-            <a href="index.html" style="color:#808098; text-decoration:none; font-size:13px;">← Voltar para a página</a>
-        </div>
+        <div class="voltar" style="text-align:center; margin-top:20px;"><a href="index.html" style="color:#808098; text-decoration:none; font-size:13px;">← Voltar para a página</a></div>
     `;
 }
 
 function verificarSenha() {
-    const senha = document.getElementById('senha-input').value;
-    if (senha === SENHA_ADMIN) {
+    if (document.getElementById('senha-input').value === SENHA_ADMIN) {
         localStorage.setItem('lp_admin_logado', 'sim');
         location.reload();
     } else {
@@ -27,14 +23,9 @@ function verificarSenha() {
     }
 }
 
-function logout() {
-    localStorage.removeItem('lp_admin_logado');
-    location.reload();
-}
+function logout() { localStorage.removeItem('lp_admin_logado'); location.reload(); }
 
-if (localStorage.getItem('lp_admin_logado') === 'sim') {
-    carregarConfig();
-}
+if (localStorage.getItem('lp_admin_logado') === 'sim') carregarConfig();
 
 async function carregarConfig() {
     try {
@@ -44,24 +35,12 @@ async function carregarConfig() {
             document.getElementById('admin-titulo').value = config.titulo || '';
             document.getElementById('admin-subtitulo').value = config.subtitulo || '';
             document.getElementById('admin-preco').value = config.preco || '';
-            document.getElementById('admin-whatsapp').value = config.whatsapp || '';
-            document.getElementById('admin-mensagem').value = config.mensagemWhatsApp || '';
             document.getElementById('admin-link-compra').value = config.linkCompra || '';
             document.getElementById('admin-video').value = config.videoYouTube || '';
-            const projetos = config.projetos || [{}, {}, {}];
-            document.getElementById('admin-proj1-nome').value = projetos[0]?.nome || '';
-            document.getElementById('admin-proj1-img').value = projetos[0]?.imagem || '';
-            document.getElementById('admin-proj1-link').value = projetos[0]?.link || '';
-            document.getElementById('admin-proj2-nome').value = projetos[1]?.nome || '';
-            document.getElementById('admin-proj2-img').value = projetos[1]?.imagem || '';
-            document.getElementById('admin-proj2-link').value = projetos[1]?.link || '';
-            document.getElementById('admin-proj3-nome').value = projetos[2]?.nome || '';
-            document.getElementById('admin-proj3-img').value = projetos[2]?.imagem || '';
-            document.getElementById('admin-proj3-link').value = projetos[2]?.link || '';
+            document.getElementById('admin-exemplo-img').value = config.exemploImagem || '';
+            document.getElementById('admin-exemplo-link').value = config.linkExemplo || '';
         }
-    } catch (e) {
-        console.log('Nenhuma configuração salva ainda.');
-    }
+    } catch (e) {}
 }
 
 async function salvarConfig() {
@@ -69,36 +48,16 @@ async function salvarConfig() {
         titulo: document.getElementById('admin-titulo').value.trim(),
         subtitulo: document.getElementById('admin-subtitulo').value.trim(),
         preco: document.getElementById('admin-preco').value.trim(),
-        whatsapp: document.getElementById('admin-whatsapp').value.trim(),
-        mensagemWhatsApp: document.getElementById('admin-mensagem').value.trim(),
         linkCompra: document.getElementById('admin-link-compra').value.trim(),
         videoYouTube: document.getElementById('admin-video').value.trim(),
-        projetos: [
-            {
-                nome: document.getElementById('admin-proj1-nome').value.trim(),
-                imagem: document.getElementById('admin-proj1-img').value.trim(),
-                link: document.getElementById('admin-proj1-link').value.trim()
-            },
-            {
-                nome: document.getElementById('admin-proj2-nome').value.trim(),
-                imagem: document.getElementById('admin-proj2-img').value.trim(),
-                link: document.getElementById('admin-proj2-link').value.trim()
-            },
-            {
-                nome: document.getElementById('admin-proj3-nome').value.trim(),
-                imagem: document.getElementById('admin-proj3-img').value.trim(),
-                link: document.getElementById('admin-proj3-link').value.trim()
-            }
-        ]
+        exemploImagem: document.getElementById('admin-exemplo-img').value.trim(),
+        linkExemplo: document.getElementById('admin-exemplo-link').value.trim()
     };
-
     try {
         await database.ref('landing-config').set(config);
         document.getElementById('msg-sucesso').style.display = 'block';
-        setTimeout(() => {
-            document.getElementById('msg-sucesso').style.display = 'none';
-        }, 2000);
+        setTimeout(() => document.getElementById('msg-sucesso').style.display = 'none', 2000);
     } catch (e) {
-        alert('❌ Erro ao salvar: ' + e.message);
+        alert('❌ Erro ao salvar');
     }
 }
