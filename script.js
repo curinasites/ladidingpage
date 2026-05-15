@@ -3,18 +3,24 @@ const CONFIG_PADRAO = {
     subtitulo: "Desenvolvimento rápido, design moderno e preço acessível. Tudo que você precisa para começar seu negócio digital.",
     preco: "97",
     linkCompra: "",
-    videoYouTube: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoYouTube: "dQw4w9WgXcQ",
     exemploImagem: "https://via.placeholder.com/800x500/8b5cf6/ffffff?text=Preview+do+Projeto",
     linkExemplo: "#"
 };
 
 function aplicarConfig(config) {
     const cfg = config || CONFIG_PADRAO;
+    
     document.getElementById('lp-titulo').innerHTML = cfg.titulo;
     document.getElementById('lp-subtitulo').textContent = cfg.subtitulo;
     document.getElementById('lp-preco').textContent = cfg.preco;
     if (document.getElementById('lp-preco-cta')) document.getElementById('lp-preco-cta').textContent = 'R$ ' + cfg.preco;
-    document.getElementById('lp-video-iframe').src = cfg.videoYouTube;
+    
+    // Monta o link embed do YouTube a partir do ID
+    const videoId = cfg.videoYouTube || 'dQw4w9WgXcQ';
+    const embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&showinfo=0`;
+    const iframe = document.getElementById('lp-video-iframe');
+    if (iframe) iframe.src = embedUrl;
     
     const linkCompra = cfg.linkCompra || '#';
     document.querySelectorAll('#lp-btn-whatsapp, #lp-btn-comprar, #lp-btn-cta, #lp-btn-header, #lp-whatsapp-float').forEach(btn => {
